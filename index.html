@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amy Rodriguez</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div id="overlay-menu" class="overlay-menu"></div>
+    <button id="dropdown-icon" class="dropdown-icon" onclick="showMenu()"><img src="img/icons/R.png" alt="menu-icon"></button>
+    <nav id="nav-menu">
+        <span class="close-menu" onclick="closeMenu()">&times;</span>
+        <ul class="nav-list">
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About me</a></li>
+            <li id="portfolioSelect" class="portfolio-select">Portfolio
+                <div id="portfolioOptions" class="portfolio-options">
+                    <a href="#illustrations" onclick="closeMenu()">Illustrations</a>
+                    <a href="#paintings" onclick="closeMenu()">Paintings</a>
+                </div>
+            </li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            <li class="bottom-icon"><a class="icon-ig" href="https://www.instagram.com/amuaart/" target="_blank"><img src="img/icons/ig.png" alt=""></a></li>
+        </ul>
+    </nav>
+    <div id="home" class="background-home">
+        <section class="intro-home">
+            <h1 class="init-text">Amy</h1>
+            <h1 class="init-text">Rodríguez</h1>
+            <h2 class="init-text home-text">Artist and Digital Animator</h2>
+            <div class="init-text">
+                <a class="link-btn init-text" href="#portfolio">Discover my work</a>
+            </div>
+        </section>
+    </div>
+    <div class="flex-container">
+        <div id="about" class="section-container">
+            <div class="about-container">
+                <div class="about-container-detail">
+                    <h2>So, who am I?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet elementum lorem quis pulvinar. Cras aliquam consequat tortor at tristique. Sed scelerisque commodo euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                </div>
+                <div>
+                    <img class="about-me-img" src="img/wantbeer.gif" alt="">
+                </div>
+                <div class="about-container-detail">
+                    <h2>What do I do?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet elementum lorem quis pulvinar. Cras aliquam consequat tortor at tristique. Sed scelerisque commodo euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                </div>
+            </div>
+        </div>
+        <div id="portfolio" class="section-container">
+            <div id="imagePreview" class="image-preview-modal">
+                <span class="close" onclick="closePreview()">&times;</span>
+                <img class="preview-content" id="previewImage" src="">
+            </div>
+            <div id="illustrations" class="gallery-container">
+                <h1>Illustrations</h1>
+                <div id="gallery-i" class="gallery-grid">
+                </div>
+            </div>
+            <div id="paintings" class="gallery-container">
+                <h1>Paintings</h1>
+                <div id="gallery-p" class="gallery-grid">
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="section-container">
+            <div class="form-container">
+                <h1 style="padding-top: 47.5px;">Contact</h1>
+                <form class="styled-form">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="nameTxt" placeholder="Enter your name">
+                    <label for="email">E-mail</label>
+                    <input type="text" name="email" id="emailTxt" placeholder="Enter your e-mail">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="messageTxt" placeholder="Your message" rows="4" required></textarea>
+                    <button type="button" onclick="sendEmail()">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
