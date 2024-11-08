@@ -96,7 +96,7 @@ function fillGallery() {
         const imageDiv = document.createElement('div');
         imageDiv.classList.add('gallery-item');
         imageDiv.classList.add('clickable-image');
-        const imageUrl = "url('/img/gallery/illustrations/" + image + "')";
+        const imageUrl = "url('img/gallery/illustrations/" + image + "')";
         console.log(imageUrl);
         imageDiv.style.backgroundImage = imageUrl;
         imageDiv.addEventListener('click', () => {
@@ -108,7 +108,7 @@ function fillGallery() {
         const imageDiv = document.createElement('div');
         imageDiv.classList.add('gallery-item');
         imageDiv.classList.add('clickable-image');
-        const imageUrl = "url('/img/gallery/paintings/" + image + "')";
+        const imageUrl = "url('img/gallery/paintings/" + image + "')";
         console.log(imageUrl);
         imageDiv.style.backgroundImage = imageUrl;
         imageDiv.addEventListener('click', () => {
